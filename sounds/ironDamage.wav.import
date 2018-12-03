@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ironDamage.wav-c2c3605a7e46c4e8494952fc5c9a8bb8.sample"
+
+[deps]
+
+source_file="res://sounds/ironDamage.wav"
+dest_files=[ "res://.import/ironDamage.wav-c2c3605a7e46c4e8494952fc5c9a8bb8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

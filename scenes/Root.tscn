@@ -1,0 +1,509 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/AmmoRoot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/heart.png" type="Texture" id=2]
+[ext_resource path="res://scenes/PlayerRoot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ColliderArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/EnemyRoot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/StageClearRoot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sounds/slam.wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/death.wav" type="AudioStream" id=8]
+[ext_resource path="res://scenes/TurnerRoot.tscn" type="PackedScene" id=9]
+
+[node name="Root" type="Node"]
+
+[node name="UiRoot" type="CanvasLayer" parent="." index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
+
+[node name="AmmoRoot" parent="UiRoot" index="0" instance=ExtResource( 1 )]
+
+margin_top = 2.0
+margin_bottom = 18.0
+
+[node name="HealthIcon" type="TextureRect" parent="UiRoot" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 8.0
+margin_right = 42.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="LabelScore" type="Label" parent="UiRoot" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 211.0
+margin_top = 3.0
+margin_right = 251.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Score:
+0"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="PlayerRoot" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 125, 700 )
+
+[node name="ColliderArea" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 134, 808 )
+
+[node name="ColliderArea20" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 70, 808 )
+
+[node name="ColliderArea21" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 6, 808 )
+
+[node name="ColliderArea18" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 198, 808 )
+
+[node name="ColliderArea19" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 262, 808 )
+
+[node name="ColliderArea14" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 274, -1061.25 )
+scale = Vector2( 0.38882, 57.5011 )
+
+[node name="ColliderArea15" parent="." index="8" instance=ExtResource( 4 )]
+
+position = Vector2( -22, -1060.06 )
+scale = Vector2( 0.5, 57.7185 )
+
+[node name="ColliderArea2" parent="." index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 240, 516 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea22" parent="." index="10" instance=ExtResource( 4 )]
+
+position = Vector2( 208, 516 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea23" parent="." index="11" instance=ExtResource( 4 )]
+
+position = Vector2( 176, 516 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea3" parent="." index="12" instance=ExtResource( 4 )]
+
+position = Vector2( 130, 330 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea25" parent="." index="13" instance=ExtResource( 4 )]
+
+position = Vector2( 110, 330 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea24" parent="." index="14" instance=ExtResource( 4 )]
+
+position = Vector2( 162, 330 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea4" parent="." index="15" instance=ExtResource( 4 )]
+
+position = Vector2( 239, 85 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea26" parent="." index="16" instance=ExtResource( 4 )]
+
+position = Vector2( 210, 85 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea27" parent="." index="17" instance=ExtResource( 4 )]
+
+position = Vector2( 190, 85 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea5" parent="." index="18" instance=ExtResource( 4 )]
+
+position = Vector2( 240, -180 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea28" parent="." index="19" instance=ExtResource( 4 )]
+
+position = Vector2( 210, -180 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea6" parent="." index="20" instance=ExtResource( 4 )]
+
+position = Vector2( 236, -1033 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="ColliderArea7" parent="." index="21" instance=ExtResource( 4 )]
+
+position = Vector2( 134, -2490 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea48" parent="." index="22" instance=ExtResource( 4 )]
+
+position = Vector2( 102, -2490 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea47" parent="." index="23" instance=ExtResource( 4 )]
+
+position = Vector2( 166, -2490 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea16" parent="." index="24" instance=ExtResource( 4 )]
+
+position = Vector2( 181, -2780 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea51" parent="." index="25" instance=ExtResource( 4 )]
+
+position = Vector2( 213, -2780 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea52" parent="." index="26" instance=ExtResource( 4 )]
+
+position = Vector2( 240, -2780 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea17" parent="." index="27" instance=ExtResource( 4 )]
+
+position = Vector2( 16, -2780 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea49" parent="." index="28" instance=ExtResource( 4 )]
+
+position = Vector2( 32, -2780 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea50" parent="." index="29" instance=ExtResource( 4 )]
+
+position = Vector2( 64, -2780 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea8" parent="." index="30" instance=ExtResource( 4 )]
+
+position = Vector2( 180, -385 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea29" parent="." index="31" instance=ExtResource( 4 )]
+
+position = Vector2( 148, -385 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea30" parent="." index="32" instance=ExtResource( 4 )]
+
+position = Vector2( 116, -385 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea31" parent="." index="33" instance=ExtResource( 4 )]
+
+position = Vector2( 84, -385 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea32" parent="." index="34" instance=ExtResource( 4 )]
+
+position = Vector2( 52, -385 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea33" parent="." index="35" instance=ExtResource( 4 )]
+
+position = Vector2( 20, -385 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea34" parent="." index="36" instance=ExtResource( 4 )]
+
+position = Vector2( 16, -385 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea9" parent="." index="37" instance=ExtResource( 4 )]
+
+position = Vector2( 220, -1332 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea42" parent="." index="38" instance=ExtResource( 4 )]
+
+position = Vector2( 240, -1332 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea10" parent="." index="39" instance=ExtResource( 4 )]
+
+position = Vector2( 16, -1250 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea43" parent="." index="40" instance=ExtResource( 4 )]
+
+position = Vector2( 32, -1250 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea44" parent="." index="41" instance=ExtResource( 4 )]
+
+position = Vector2( 64, -1250 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea11" parent="." index="42" instance=ExtResource( 4 )]
+
+position = Vector2( 16, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea35" parent="." index="43" instance=ExtResource( 4 )]
+
+position = Vector2( 43, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea36" parent="." index="44" instance=ExtResource( 4 )]
+
+position = Vector2( 64, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea37" parent="." index="45" instance=ExtResource( 4 )]
+
+position = Vector2( 138, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea38" parent="." index="46" instance=ExtResource( 4 )]
+
+position = Vector2( 170, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea39" parent="." index="47" instance=ExtResource( 4 )]
+
+position = Vector2( 202, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea40" parent="." index="48" instance=ExtResource( 4 )]
+
+position = Vector2( 234, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea41" parent="." index="49" instance=ExtResource( 4 )]
+
+position = Vector2( 240, -684 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea12" parent="." index="50" instance=ExtResource( 4 )]
+
+position = Vector2( 130, -1664 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea13" parent="." index="51" instance=ExtResource( 4 )]
+
+position = Vector2( 64, -2090 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea45" parent="." index="52" instance=ExtResource( 4 )]
+
+position = Vector2( 96, -2090 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="ColliderArea46" parent="." index="53" instance=ExtResource( 4 )]
+
+position = Vector2( 124, -2090 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CameraRoot" type="Camera2D" parent="." index="54"]
+
+position = Vector2( 128, 0 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 20.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Limit", "Smoothing", "Transform" ]
+
+[node name="EnemyRoot" parent="." index="55" instance=ExtResource( 5 )]
+
+position = Vector2( 219.902, 483.817 )
+
+[node name="EnemyRoot2" parent="." index="56" instance=ExtResource( 5 )]
+
+position = Vector2( 126.802, 298.079 )
+
+[node name="EnemyRoot3" parent="." index="57" instance=ExtResource( 5 )]
+
+position = Vector2( 229.494, 52.8212 )
+
+[node name="EnemyRoot4" parent="." index="58" instance=ExtResource( 5 )]
+
+position = Vector2( 210.889, -212.141 )
+
+[node name="EnemyRoot5" parent="." index="59" instance=ExtResource( 5 )]
+
+position = Vector2( 83.7442, -417.032 )
+
+[node name="EnemyRoot6" parent="." index="60" instance=ExtResource( 5 )]
+
+position = Vector2( 42.3213, -717.314 )
+
+[node name="EnemyRoot7" parent="." index="61" instance=ExtResource( 5 )]
+
+position = Vector2( 220.142, -1364.2 )
+
+[node name="EnemyRoot9" parent="." index="62" instance=ExtResource( 5 )]
+
+position = Vector2( 34.3198, -1282.01 )
+
+[node name="EnemyRoot8" parent="." index="63" instance=ExtResource( 5 )]
+
+position = Vector2( 89.9281, -2121.86 )
+
+[node name="EnemyRoot10" parent="." index="64" instance=ExtResource( 5 )]
+
+position = Vector2( 132.812, -2522.05 )
+
+[node name="StageClearRoot" parent="." index="65" instance=ExtResource( 6 )]
+
+position = Vector2( 123, -2780.57 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AudioSlam" type="AudioStreamPlayer" parent="." index="66"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Slam Bus"
+
+[node name="PlayerAudioDeath" type="AudioStreamPlayer2D" parent="." index="67"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Slam Bus > 10000"
+area_mask = 1
+
+[node name="TurnerRoot" parent="." index="68" instance=ExtResource( 9 )]
+
+position = Vector2( 257.25, 78.8149 )
+
+[node name="TurnerRoot2" parent="." index="69" instance=ExtResource( 9 )]
+
+position = Vector2( 173.198, 78.6168 )
+
+[node name="TurnerRoot17" parent="." index="70" instance=ExtResource( 9 )]
+
+position = Vector2( 180.798, 323.347 )
+
+[node name="TurnerRoot19" parent="." index="71" instance=ExtResource( 9 )]
+
+position = Vector2( 259.014, 509.86 )
+
+[node name="TurnerRoot20" parent="." index="72" instance=ExtResource( 9 )]
+
+position = Vector2( 156.732, 509.86 )
+
+[node name="TurnerRoot18" parent="." index="73" instance=ExtResource( 9 )]
+
+position = Vector2( 90.8005, 324.349 )
+
+[node name="TurnerRoot3" parent="." index="74" instance=ExtResource( 9 )]
+
+position = Vector2( 192.318, -185.35 )
+
+[node name="TurnerRoot4" parent="." index="75" instance=ExtResource( 9 )]
+
+position = Vector2( 259.009, -185.682 )
+
+[node name="TurnerRoot5" parent="." index="76" instance=ExtResource( 9 )]
+
+position = Vector2( 197.065, -391.041 )
+
+[node name="TurnerRoot21" parent="." index="77" instance=ExtResource( 9 )]
+
+position = Vector2( 104.217, -389.005 )
+scale = Vector2( 0.000385205, 1 )
+
+[node name="TurnerRoot6" parent="." index="78" instance=ExtResource( 9 )]
+
+position = Vector2( -1.48139, -390.039 )
+
+[node name="TurnerRoot7" parent="." index="79" instance=ExtResource( 9 )]
+
+position = Vector2( -1.59373, -688.935 )
+
+[node name="TurnerRoot8" parent="." index="80" instance=ExtResource( 9 )]
+
+position = Vector2( 81.6355, -687.18 )
+
+[node name="TurnerRoot9" parent="." index="81" instance=ExtResource( 9 )]
+
+position = Vector2( 81.2272, -1255.06 )
+
+[node name="TurnerRoot10" parent="." index="82" instance=ExtResource( 9 )]
+
+position = Vector2( -1.26506, -1254.24 )
+
+[node name="TurnerRoot11" parent="." index="83" instance=ExtResource( 9 )]
+
+position = Vector2( 203.29, -1336.73 )
+
+[node name="TurnerRoot12" parent="." index="84" instance=ExtResource( 9 )]
+
+position = Vector2( 257.083, -1336.11 )
+
+[node name="TurnerRoot13" parent="." index="85" instance=ExtResource( 9 )]
+
+position = Vector2( 141.064, -2096.23 )
+
+[node name="TurnerRoot14" parent="." index="86" instance=ExtResource( 9 )]
+
+position = Vector2( 47.0548, -2096.23 )
+
+[node name="TurnerRoot15" parent="." index="87" instance=ExtResource( 9 )]
+
+position = Vector2( 85.1854, -2495.82 )
+
+[node name="TurnerRoot16" parent="." index="88" instance=ExtResource( 9 )]
+
+position = Vector2( 183.151, -2496.27 )
+
+
